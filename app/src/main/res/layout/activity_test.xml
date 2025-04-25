@@ -1,0 +1,15 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button android:id="@+id/btn_bind"    android:text="Bind Service"   android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_list"    android:text="List Clips"     android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_play"    android:text="Play Clip 1"    android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_pause"   android:text="Pause"         android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_resume"  android:text="Resume"        android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_stop"    android:text="Stop"          android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    <Button android:id="@+id/btn_unbind"  android:text="Unbind Service" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+
+</LinearLayout>
