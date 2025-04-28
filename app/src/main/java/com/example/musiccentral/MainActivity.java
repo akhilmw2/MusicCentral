@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // show the simple splash UI
+        setContentView(R.layout.activity_main);
         // Automatically bind to the MusicService on startup
         Intent intent = new Intent(this, MusicService.class);
         boolean ok = bindService(intent, conn, Context.BIND_AUTO_CREATE);

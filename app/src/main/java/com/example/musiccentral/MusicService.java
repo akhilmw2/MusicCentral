@@ -23,7 +23,6 @@ public class MusicService extends Service {
     private final IMusicService.Stub binder = new IMusicService.Stub() {
         @Override
         public int[] listClips() {
-            // Return 1-based IDs for UI; length matches CLIP_RES_IDS
             int[] ids = new int[CLIP_RES_IDS.length];
             for (int i = 0; i < ids.length; i++) {
                 ids[i] = i + 1;
@@ -114,10 +113,6 @@ public class MusicService extends Service {
 
 
 
-    /**
-     * Called when all clients have unbound (e.g. Activity.destroy() → unbindService()).
-     * We’ll stop playback here so it doesn’t keep running “orphaned.”
-     */
     @Override
     public boolean onUnbind(Intent intent) {
         if (mediaPlayer != null && playbackState != PlaybackState.STOPPED) {
@@ -128,10 +123,6 @@ public class MusicService extends Service {
         return super.onUnbind(intent);
     }
 
-    /**
-     * Called if the service is removed from Recents/task switcher.
-     * Ensure we clean up and shut down the service.
-     */
     @Override
     public void onTaskRemoved(Intent rootIntent) {
         super.onTaskRemoved(rootIntent);
